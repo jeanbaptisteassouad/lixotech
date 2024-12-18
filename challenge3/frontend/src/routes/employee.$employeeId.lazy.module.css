@@ -1,0 +1,40 @@
+.vacations {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.vacations > * {
+	padding: 1rem;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.vacations > *:nth-last-child(-n + 3) {
+	border-bottom: none;
+}
+
+.vacationsHeader {
+	font-weight: bold;
+}
+
+.form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.form > textarea {
+	grid-column: 1 / span 2;
+	width: 100%;
+	resize: vertical;
+}
+
+.form > input[type="submit"] {
+	grid-column: 2;
+}
+
+.errorCard {
+	margin-top: 1rem;
+	background: var(--error-card-color);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}

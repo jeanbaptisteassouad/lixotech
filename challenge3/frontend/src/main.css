@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+	font-family: "Funnel Sans", serif;
+	--border-color: #7a5b37;
+	--color: #3c362d;
+	--link-color: #895418;
+	--error-card-color: #ffd5d5;
+	--button-background: #ffa947;
+	--button-color: #ffffff;
+	--light-grey: grey;
+
+	color: var(--color);
+}
+
+a {
+	color: var(--link-color);
+}
+
+input {
+	border: 1px solid var(--border-color);
+	border-radius: 3px;
+	padding: 0.5rem;
+}
+
+input:focus {
+	outline: 1px solid var(--link-color);
+}
+
+input[type="submit"] {
+	background: var(--button-background);
+	color: var(--button-color);
+	font-weight: bold;
+	padding: 1rem 2rem;
+	line-height: 0;
+	cursor: pointer;
+}

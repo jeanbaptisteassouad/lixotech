@@ -1,0 +1,34 @@
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+        - POSTGRES_PASSWORD=postgres
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: backend
+    environment:
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - PGHOST=database
+      - PGPORT=5432
+      - PGDATABASE=postgres
+    restart: always
+
+  frontend:
+    build:
+      context: frontend
+    restart: always
+
+  reverse_proxy:
+    build:
+      context: reverse_proxy
+    ports:
+      - ${LIXOTECH_PORT:?error}:80
+    restart: always
+
+volumes:
+  postgres_data:

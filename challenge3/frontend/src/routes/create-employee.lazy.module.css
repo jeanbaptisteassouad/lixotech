@@ -1,0 +1,11 @@
+.form {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.errorCard {
+	margin-top: 1rem;
+	background: var(--error-card-color);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}

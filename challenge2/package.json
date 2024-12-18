@@ -1,0 +1,11 @@
+{
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"typescript": "^5.7.2"
+	},
+	"scripts": {
+		"check": "npm run biomeCheck && npm run tsc",
+		"tsc": "npx tsc --noEmit",
+		"biomeCheck": "npx @biomejs/biome check --write"
+	}
+}

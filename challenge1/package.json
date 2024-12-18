@@ -1,0 +1,17 @@
+{
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.10.2",
+		"typescript": "^5.7.2"
+	},
+	"scripts": {
+		"check": "npm run biomeCheck && npm run tsc && npm run test",
+		"tsc": "npx tsc --noEmit",
+		"test": "npx vitest run",
+		"biomeCheck": "npx @biomejs/biome check --write"
+	},
+	"dependencies": {
+		"vitest": "^2.1.8",
+		"workerpool": "^9.2.0"
+	}
+}
